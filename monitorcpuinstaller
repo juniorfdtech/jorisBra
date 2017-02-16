@@ -1,5 +1,5 @@
 #!/bin/bash
 echo "INSTALANDO MONITOR CPU..."
 sleep 2
-wget http://phreaker56.site88.net/FREE/314519/sshlimiter2.sh -O /bin/monitorcpu
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/monitorcpu -O /bin/monitorcpu
 chmod +x /bin/monitorcpu
