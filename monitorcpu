@@ -1,3 +1,2 @@
 #!/bin/bash
-apt-get install htop -y
-echo "Instalado com sucesso"
+htop
