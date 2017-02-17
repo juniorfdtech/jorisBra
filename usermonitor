@@ -24,7 +24,7 @@ branco="\033[1;37m"
 while true; do
 
 echo -e "\033[0;32m*********************************************************\033[0;32m"
-echo -e " \033[47;30m       ⓤⓢⓤⓐⓡⓘⓞⓢ             |          ⓒⓞⓝⓔⓧⓞⓔⓢ         \033[0m"
+echo -e " \033[47;30m       ỮŞỮΔŘƗØŞ             |          ĆØŇ€ЖØ€Ş         \033[0m"
 echo -e "\033[0;32m*********************************************************\033[0;32m"
         for usur in `awk -F : '$3 > 900 { print $1 }' /etc/passwd |grep -v "nobody" |grep -vi polkitd |grep -vi systemd-[a-z] |grep -vi systemd-[0-9]`; do
 	usurnum=$(ps -u $usur |grep sshd |wc -l)
