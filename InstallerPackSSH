@@ -106,7 +106,7 @@ read -p ": " opcao
 
 case $opcao in
  1)
-  monitorcpu;;
+  bash monitorcpu
  2)
   Usercreate;;
  3)
