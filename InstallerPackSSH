@@ -103,3 +103,43 @@ echo -e "\033[1;37mEscolha uma das opçoẽs:    \033[1;37mPara Sair Ctrl + C\03
 [16] Detalhes \033[1;30m(Detalhes sobre o VpsPack)\033[1;33m
 [17] Desinstalar \033[1;30m(Remover o VpsPack)\033[0m"
 read -p ": " opcao
+
+case $opcao in
+ 1)
+  monitorcpu;;
+ 2)
+  Usercreate;;
+ 3)
+  UserRedefine;;
+ 4)
+  UserBack;;
+ 5)
+  firewall-block;;
+ 6)
+  ResetFirewall;;
+ 7)
+  install-addhost;;
+ 8)
+  add-host;;
+ 9)
+  Monitoring;;
+ 10)
+  backupusers;; 
+ 11)
+  read -p "Em qual diretorio esta o arquivo de Backup: " arq 
+  restusers $arq;;
+ 12)
+  detalhesusers;;
+ 13)
+  banner;;
+ 14)
+  speedtest;;
+ 15)
+  systemdetalhes;;
+ 16)
+  Detalhes;;
+ 17)
+  Desinstalar;;
+ *)
+  id > /dev/null 2> /dev/null
+esac
