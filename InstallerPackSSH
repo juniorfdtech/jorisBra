@@ -52,3 +52,6 @@ chmod +x /bin/OpenUDP
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/TesteConexao -O /bin/TesteConexao
 chmod +x /bin/TesteConexao
 
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/Banner -O /bin/Banner
+chmod +x /bin/Banner
+
