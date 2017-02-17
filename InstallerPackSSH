@@ -48,3 +48,7 @@ chmod +x /bin/UserMonitor
 
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/OpenUdp -O /bin/OpenUDP
 chmod +x /bin/OpenUDP
+
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/TesteConexao -O /bin/TesteConexao
+chmod +x /bin/TesteConexao
+
