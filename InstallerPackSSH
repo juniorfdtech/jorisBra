@@ -29,8 +29,7 @@ echo -e "\033[1;30m-------------------------------------------------------------
 sleep 5
 
 echo -e "\033[1;34m INSTALANDO PACKSSH...\033[1;32m"
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-15s\n' "INSTALANDO PackSSH" ; tput sgr0
-echo"
+tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "INSTALANDO PACKSSH" ; tput sgr0
 sleep 2
 apt-get install htop -y
 clear
