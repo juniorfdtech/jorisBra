@@ -35,8 +35,11 @@ apt-get install htop -y
 apt-get update
 
 clear
-wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/monitorcpu -O /bin/monitorcpu
-chmod +x /bin/monitorcpu
-sleep 2
-wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/LimpadorCache -O /bin/limpadorcache
-chmod +x /bin/limpadorcache
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/monitorcpu -O /bin/CpuMonitor
+chmod +x /bin/CpuMonitor
+
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/LimpadorCache -O /bin/LimpadorCache
+chmod +x /bin/LimpadorCache
+
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/usermonitor -O /bin/UserMonitor
+chmod +x /bin/UserMonitor
