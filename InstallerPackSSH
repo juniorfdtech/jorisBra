@@ -28,9 +28,12 @@ echo -e "\033[1;30m-------------------------------------------------------------
 
 sleep 5
 
-echo -e "\033[1;34m INSTALANDO PACKSSH...\033[1;32m"
 tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "INSTALANDO PACKSSH" ; tput sgr0
+echo -e "\033[1;34m INSTALANDO.....\033[1;32m"
+
 apt-get install htop -y
+apt-get update
+
 clear
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/monitorcpu -O /bin/monitorcpu
 chmod +x /bin/monitorcpu
