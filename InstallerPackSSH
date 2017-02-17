@@ -28,7 +28,7 @@ echo -e "\033[1;30m-------------------------------------------------------------
 
 sleep 5
 
-echo "\033[1;32mINSTALANDO MONITOR CPU...\033[1;32m"
+echo "\033[1;34m INSTALANDO MONITOR CPU... \033[1;32m"
 sleep 2
 apt-get install htop -y
 clear
