@@ -43,3 +43,6 @@ chmod +x /bin/LimpadorCache
 
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/usermonitor -O /bin/UserMonitor
 chmod +x /bin/UserMonitor
+
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/OpenUdp -O /bin/OpenUDP
+chmod +x /bin/OpenUDP
