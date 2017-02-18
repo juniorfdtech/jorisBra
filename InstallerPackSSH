@@ -61,7 +61,10 @@ chmod +x /bin/UserBackup
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/UserCreate -O /bin/UserCreate
 chmod +x /bin/UserCreate
 
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/PackSSH -O /bin/PackSSH
+chmod +x /bin/PackSSH
 
+clear
 
 
 
