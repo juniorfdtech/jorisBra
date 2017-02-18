@@ -19,7 +19,7 @@ cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 
 
-echo -e "\033[1;37m PackSSH \033[0m"
+tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "PackSSH" ; tput sgr0
 echo -e Escolha uma das opçoẽs:    Para Sair Ctrl + C
-echo -e "\033[01;31m=====>UserCreate(Criar Usuarios SSH)\033[0m"
-echo -e "\033[01;31m=====>UserBackup(Gerenciar Backup de Usuarios SSH\033[0m"
+echo -e "\033[01;31m=====> UserCreate(Criar Usuarios SSH)\033[0m"
+echo -e "\033[01;31m=====> UserBackup(Gerenciar Backup de Usuarios SSH\033[0m"
