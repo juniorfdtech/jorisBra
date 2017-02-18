@@ -59,7 +59,7 @@ else
 										exit 1
 									else
 										read -p "Nº de conexões simultâneas permitidas: " sshlimiter
-										if (echo $sshlimiter | egrep '[^0-9]' &> /dev/null)
+										if (echo $LimiterSSH | egrep '[^0-9]' &> /dev/null)
 										then
 											tput setaf 8 ; tput setab 5 ; tput bold ; echo "" ; echo "Você digitou um número de conexões inválido!" ; echo "" ; tput sgr0
 											exit 1
@@ -78,8 +78,8 @@ else
 													gui=$(date "+%d/%m/%Y" -d "+$dias days")
 													pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
 													useradd -e $final -M -s /bin/false -p $pass $username
-													[ $? -eq 0 ] && tput setaf 2 ; tput bold ; echo ""; echo "Usuário $username criado" ; echo "Data de expiração: $gui" ; echo "Nº de conexões simultâneas permitidas: $sshlimiter" ; echo "" || echo "Não foi possível criar o usuário!" ; tput sgr0
-													echo "$username $sshlimiter" >> /root/usuarios.db
+													[ $? -eq 0 ] && tput setaf 2 ; tput bold ; echo ""; echo "Usuário $username criado" ; echo "Data de expiração: $gui" ; echo "Nº de conexões simultâneas permitidas: $LimiterSSH" ; echo "" || echo "Não foi possível criar o usuário!" ; tput sgr0
+													echo "$username $LimiterSSH" >> /root/usuarios.db
 												fi
 											fi
 										fi
