@@ -40,8 +40,8 @@ clear
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/monitorcpu -O /bin/CpuMonitor
 chmod +x /bin/CpuMonitor
 
-wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/LimpadorCache -O /bin/LimpadorCache
-chmod +x /bin/LimpadorCache
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/LimpadorCache -O /bin/ClearCache
+chmod +x /bin/ClearCache
 
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/usermonitor -O /bin/UserMonitor
 chmod +x /bin/UserMonitor
@@ -49,8 +49,8 @@ chmod +x /bin/UserMonitor
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/OpenUdp -O /bin/OpenUDP
 chmod +x /bin/OpenUDP
 
-wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/TesteConexao -O /bin/TesteConexao
-chmod +x /bin/TesteConexao
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/TesteConexao -O /bin/SpeedTest
+chmod +x /bin/SpeedTest
 
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/Banner -O /bin/Banner
 chmod +x /bin/Banner
@@ -58,3 +58,5 @@ chmod +x /bin/Banner
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/UserBackup -O /bin/UserBackup
 chmod +x /bin/UserBackup
 
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/UserCreate -O /bin/UserCreate
+chmod +x /bin/UserCreate
