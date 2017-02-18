@@ -55,3 +55,6 @@ chmod +x /bin/TesteConexao
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/Banner -O /bin/Banner
 chmod +x /bin/Banner
 
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/UserBackup -O /bin/UserBackup
+chmod +x /bin/UserBackup
+
