@@ -64,12 +64,12 @@ else
 											tput setaf 8 ; tput setab 5 ; tput bold ; echo "" ; echo "Você digitou um número de conexões inválido!" ; echo "" ; tput sgr0
 											exit 1
 										else
-											if [[ -z $sshlimiter ]]
+											if [[ -z $LimiterSSH ]]
 											then
 												tput setaf 8 ; tput setab 5 ; tput bold ; echo "" ; echo "Você deixou o número de conexões simultâneas vazio!" ; echo "" ; tput sgr0
 												exit 1
 											else
-												if [[ $sshlimiter -lt 1 ]]
+												if [[ $LimiterSSH -lt 1 ]]
 												then
 													tput setaf 8 ; tput setab 5 ; tput bold ; echo "" ; echo "Você deve digitar um número de conexões simultâneas maior que zero!" ; echo "" ; tput sgr0
 													exit 1
