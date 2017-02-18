@@ -69,7 +69,13 @@ clear
 
 
 
-echo -e "\033[1;37m PackSSH \033[0m"
-echo -e "\033[1;37mEscolha uma das opçoẽs:    \033[1;37mPara Sair Ctrl + C\033[1;33m
-echo -e "\033[1;32m====>\033[1;32m" UserCreate \033[1;30m(Criar usuarios)\033[1;33m
-echo -e "\033[1;32m====>\033[1;32m" UserBackup \033[1;30m(Backup de usuários)\033[1;33m
+tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "PackSSH" ; tput sgr0
+echo -e Escolha uma das opçoẽs:    Para Sair Ctrl + C
+echo -e "\033[01;31m=====> UserCreate (Criar Usuarios SSH)\033[0m"
+echo -e "\033[01;31m=====> UserBackup (Gerencia Backup de Usuarios SSH)\033[0m"
+echo -e "\033[01;31m=====> CpuMonitor (Monitora o Uso da CPU, RAM e UPTIME)\033[0m"
+echo -e "\033[01;31m=====> UserMonitor (Monitora Os Usuarios Conectados)\033[0m"
+echo -e "\033[01;31m=====> ClearCache (Limpa Cache e Swap da Maquina)\033[0m"
+echo -e "\033[01;31m=====> OpenUDP (Libera a porta UDP para Ligacão e jogos)\033[0m"
+echo -e "\033[01;31m=====> SpeedTest (Testa a Velociade de Link do Servidor)\033[0m"
+echo -e "\033[01;31m=====> Banner (Mensagem para Usuarios Quando Conectar ao Servidor)\033[0m"
