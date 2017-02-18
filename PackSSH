@@ -20,6 +20,6 @@ branco="\033[1;37m"
 
 
 echo -e "\033[1;37m PackSSH \033[0m"
-echo -e "\033[1;37mEscolha uma das opçoẽs:    \033[1;37mPara Sair Ctrl + C\033[1;33m
+echo -e Escolha uma das opçoẽs:    Para Sair Ctrl + C
 echo -e ====> UserCreate (Criar usuarios)
 echo -e ====> UserBackup (Backup de usuarios)
