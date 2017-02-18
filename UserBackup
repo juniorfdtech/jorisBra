@@ -1,3 +1,4 @@
+tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "Gerenciador Backup de Usuários" ; tput sgr0
 echo "O que deseja fazer?"
 echo ""
 echo "1 - CRIAR BACKUP"
