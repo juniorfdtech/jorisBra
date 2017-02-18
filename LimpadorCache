@@ -19,15 +19,12 @@ purpleClaro="\033[1;35m"
 cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 
-
 cat -n /etc/issue |grep 1 |cut -d' ' -f6,7,8 |sed 's/1//' |sed 's/      //' > /etc/so
-tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "Limpador de Cache e Swap ; tput sgr0
-echo -e "\033[1;34mPARA LIMPAR O CACHE E SWAP DE UM ENTER!\033[1;34m"
+echo -e "\033[1;31mPARA LIMPAR O CACHE DE UM ENTER!\033[0m"
 read -p "" ip
 
 
-echo -e "\033[1;31mLimpando o Cache e Swap...\033[1;31m"
-sleep 2
+echo "Limpando o Cache e Swap..."
 echo 3 > /proc/sys/vm/drop_caches
 sysctl -w vm.drop_caches=3
 swapoff -a && swapon -a
@@ -36,4 +33,4 @@ clear
 service ssh restart & service squid3 restart
 clear
 
-echo -e "\033[1;34mLimpeza do Cache e Swap Concluido com Sucesso!\033[1;34m"
+echo -e "\033[01;31mLimpeza do Cache e Swap concluida\033[0m"
