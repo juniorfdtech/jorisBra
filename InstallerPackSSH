@@ -60,3 +60,13 @@ chmod +x /bin/UserBackup
 
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/UserCreate -O /bin/UserCreate
 chmod +x /bin/UserCreate
+
+
+
+
+
+
+echo -e "\033[1;37m PackSSH \033[0m"
+echo -e "\033[1;37mEscolha uma das opçoẽs:    \033[1;37mPara Sair Ctrl + C\033[1;33m
+echo -e "\033[1;32m====>\033[1;32m" UserCreate \033[1;30m(Criar usuarios)\033[1;33m
+echo -e "\033[1;32m====>\033[1;32m" UserBackup \033[1;30m(Backup de usuários)\033[1;33m
