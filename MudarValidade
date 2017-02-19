@@ -1,5 +1,5 @@
 #!/bin/bash
-tput setaf 8 ; tput setab 5 ; tput bold ; printf '%33s%s%-12s\n' "Mudar Data de Validade do Usuaario" ; tput sgr0
+tput setaf 8 ; tput setab 5 ; tput bold ; printf '%33s%s%-12s\n' "Mudar Data de Validade do Usuario" ; tput sgr0
 echo ""
 tput bold ; echo "Lista de usuários e datas de expiração:" ; tput sgr0
 echo ""
