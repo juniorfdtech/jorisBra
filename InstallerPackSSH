@@ -73,6 +73,9 @@ chmod +x /bin/MudarSenha
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/MudarValidade -O /bin/MudarValidade
 chmod +x /bin/MudarValidade
 
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/UserDel -O /bin/UserDel
+chmod +x /bin/UserDel
+ 
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/PackSSH -O /bin/PackSSH
 chmod +x /bin/PackSSH
 
@@ -96,3 +99,4 @@ echo -e "\033[01;31m•====> LimiterSSH (Limita as Conexoes Definidas de Cada Us
 echo -e "\033[01;31m•====> MudarLimite (Muda o Limite do Usuario)\033[0m"
 echo -e "\033[01;31m•====> MudarSenha (Muda a Senha do Usuario)\033[0m"
 echo -e "\033[01;31m•====> MudarValidade (Muda a Data de Validade do Usuario)\033[0m"
+echo -e "\033[01;31m•====> UserDel (Deleta Usuario)\033[0m"
