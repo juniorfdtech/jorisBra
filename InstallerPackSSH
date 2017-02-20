@@ -77,7 +77,7 @@ wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/MudarSenha -O /b
 chmod +x /bin/MudarSenha
 
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/ConfVps -O /bin/ConfVPS
-cmhod +x /bin/ConfVPS
+chmod +x /bin/ConfVPS
 
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/MudarValidade -O /bin/MudarValidade
 chmod +x /bin/MudarValidade
