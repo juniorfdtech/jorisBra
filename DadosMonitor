@@ -1,0 +1,4 @@
+#1/bin/bash
+"\033[1;34m PARA SAIR APERTE CRRL + C\033[1;32m"
+sleep 4
+nload
