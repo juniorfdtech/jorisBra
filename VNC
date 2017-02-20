@@ -4,3 +4,9 @@ sleep 3
 
 vncserver
 
+echo -e "\033[1;34m VNC se conecta usando o ip da vps na porta 5901\033[1;32m"
+echo -e "\033[1;34m Exemplo: 111.111.111.11:5901\033[1;32m"
+echo -e "\033[1;34m Para acessar a interface gráfica\033[1;32m"
+echo -e "\033[1;34m Baixe na PlayStore o VNC VIWER\033[1;32m"
+echo -e "\033[1;34m Coloque o Ip e a porta 5901\033[1;32m"
+echo -e "\033[1;34m PRONTO, AGORA SO USAR.\033[1;32m"
