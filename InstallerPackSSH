@@ -31,8 +31,8 @@ sleep 5
 tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "INSTALANDO PACKSSH" ; tput sgr0
 echo -e "\033[1;34m INSTALANDO...\033[1;32m"
 
-apt-get install htop -y
 apt-get update
+apt-get install htop
 apt-get install python-pip -y
 pip install speedtest-cli
 apt-get install xfce4 xfce4-goodies gnome-icon-theme tightvncserver sudo -y
