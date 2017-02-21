@@ -89,7 +89,7 @@ wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/UserDel -O /bin/
 chmod +x /bin/UserDel
 
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/DadosMonitor -O /bin/DadosMonitor
-cmhod +x /bin/DadosMonitor
+chmod +x /bin/DadosMonitor
  
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/PackSSH -O /bin/PackSSH
 chmod +x /bin/PackSSH
