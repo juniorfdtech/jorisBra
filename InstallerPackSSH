@@ -91,6 +91,9 @@ chmod +x /bin/UserDel
 
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/DadosMonitor -O /bin/DadosMonitor
 chmod +x /bin/DadosMonitor
+
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/OpenVPN - O /bin/OpenVPN
+chmod +x /bin/OpenVPN
  
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/PackSSH -O /bin/PackSSH
 chmod +x /bin/PackSSH
@@ -103,6 +106,7 @@ clear
 tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "PackSSH" ; tput sgr0
 echo -e OBS:    Digite - PackSSH - para acessar esse PACK
 echo -e "\033[01;34m•====> ConfVPS (CONFIGURA A VPS|SQUID3|)\033[01;34m"
+echo -e "\033[01;31m•====> OpenVPN (Configura o OpenVPN)\033[0m"
 echo -e "\033[01;31m•====> UserCreate (Criar Usuarios SSH)\033[0m"
 echo -e "\033[01;31m•====> UserBackup (Gerencia Backup dos Usuarios SSH)\033[0m"
 echo -e "\033[01;31m•====> CpuMonitor (Monitora o Uso da CPU, RAM e UPTIME)\033[0m"
