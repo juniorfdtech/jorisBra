@@ -1,7 +1,7 @@
 # limparCache.sh
 #!/bin/bash
 
-tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "LimpadorCache" ; tput sgr0
+tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "Limpador e Swap" ; tput sgr0
 echo ""
 
 corPadrao="\033[0m"
