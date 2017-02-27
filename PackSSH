@@ -38,21 +38,22 @@ echo -e "|14|\033[01;31m•====> MudarSenha (Muda a Senha do Usuario)\033[0m"
 echo -e "|15|\033[01;31m•====> MudarValidade (Muda a Data de Validade do Usuario)\033[0m"
 echo -e "|16|\033[01;31m•====> UserDel (Deleta Usuario)\033[0m"
 echo -e "|17|\033[01;31m•====> addhost (Adiciona Novo Host ao Squid)\033[0m"
+echo -e "|18|\033[01;31m•====> OpenVPN (Configura e Gerencia Usuarios .ovpn)\033[0m"
 echo""
-read -p " Selecione a opção [01-17] : " opcao
+read -p " Selecione a opção [01-18]: " opcao
 
 case $opcao in
  01)
   ConfVPS
-  sleep 5
+  sleep 4
   PackSSH;;
  02)
   UserCreate
-  sleep 4
+  sleep 5
   PackSSH;;
  03)
   UserBackup
-  sleep 4
+  sleep 5
   PackSSH;;
  04)
   CpuMonitor;;
@@ -62,7 +63,7 @@ case $opcao in
   DadosMonitor;;
  07)
   VNC
-  sleep 4
+  sleep 8
   PackSSH;;
  08)
   ClearCache
@@ -72,7 +73,7 @@ case $opcao in
   OpenUDP;;
  10)
   SpeedTest
-  sleep 4
+  sleep 8
   PackSSH;;
  11)
   Banner
@@ -90,7 +91,7 @@ case $opcao in
   PackSSH;;
  15)
   MudarValidade
-  sleep 4
+  sleep 5
   PackSSH;;
  16)
   UserDel
@@ -99,5 +100,9 @@ case $opcao in
  17)
   addhost
   sleep 4
+  PackSSH;;
+ 18)
+  OpenVPN
+  sleep 5
   PackSSH;;
 esac
