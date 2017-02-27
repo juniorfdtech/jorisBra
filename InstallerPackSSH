@@ -68,6 +68,9 @@ chmod +x /bin/UserBackup
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/UserCreate -O /bin/UserCreate
 chmod +x /bin/UserCreate
 
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/UserClear -O /bin/UserClear
+chmod +x /bin/UserClear
+
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/LimiterSSH -O /bin/LimiterSSH
 chmod +x /bin/LimiterSSH
 
@@ -124,6 +127,7 @@ echo -e "|15|\033[01;31m•====> MudarValidade (Muda a Data de Validade do Usuar
 echo -e "|16|\033[01;31m•====> UserDel (Deleta Usuario)\033[0m"
 echo -e "|17|\033[01;31m•====> addhost (Adiciona Novo Host ao Squid)\033[0m"
 echo -e "|18|\033[01;31m•====> OpenVPN (Configura e Gerencia Usuarios .ovpn)\033[0m"
+echo -e "|19|\033[01;31m•====> UserClear (Limpa Usuarios vencidos)\033[0m"
 echo""
 read -p " Selecione a opção [01-18]: " opcao
 
@@ -189,5 +193,9 @@ case $opcao in
  18)
   OpenVPN
   sleep 5
+  PackSSH;;
+ 19)
+  UserClear
+  sleep 3
   PackSSH;;
 esac
