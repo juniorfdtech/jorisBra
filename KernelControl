@@ -2,7 +2,7 @@
 apt-get install lynx
 clear
 
-tput setaf 8 ; tput setab 5; tput bold ; printf '%30s%s%-15s\n' "OpenVPN Manager" ; tput sgr0
+tput setaf 8 ; tput setab 5; tput bold ; printf '%30s%s%-15s\n' "Genciador do Kernel" ; tput sgr0
 echo ""
 sleep 2
 
@@ -124,27 +124,30 @@ if [[ "$1" = "--rem" || "$1" = "-r" ]]; then
 	removeclean
 	exit 0
 fi
+tput setaf 8 ; tput setab 5; tput bold ; printf '%30s%s%-15s\n' "Genciador do Kernel" ; tput sgr0
+echo ""
 
 while :
 do
 	clear
 	echo
-	echo "Este script permite que você controle o seu kernel
-	Atualizando, limpando e fazendo outras operações"
+	echo -e "\033[0;32m Este script permite que você controle o seu kernel
+	Atualizando, limpando e fazendo outras operações \033[0;32m"
 	echo
-	echo "a) Kernel Updates"
-	echo "b) Excluir Kernel antigo"
-	echo "c) Sair"
+	echo -e "\033[1;34m   1) Kernel Updates\033[1;34m"
+	echo -e "\033[1;34m   2) Excluir Kernel antigo\033[1;34m"
+	echo -e "\033[1;34m   3) Sair\033[1;34m"
 	echo
-	read -n 1 -p 'O que você quer fazer?' -s x
-	case $x in
-		a )	echo
+	echo ""
+	read -p "Selecione a opção [1-3]: " option
+		case $option in
+		1 )	echo
 			updatelatest
 			;;
-		b )	echo
+		2 )	echo
 			removeclean
 			;;
-		q )	echo
+		3 )	echo
 			clear
 		  	echo -e "\033[0;31mSaindo...!\033[0;31m"
 		  	echo
