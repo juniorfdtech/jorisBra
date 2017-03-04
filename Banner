@@ -10,5 +10,4 @@ else
 echo "Banner /etc/bannerssh" >> /etc/ssh/sshd_config
 service ssh restart > /dev/null 2> /dev/null
 service sshd restart > /dev/null 2> /dev/null
-banner
 fi
