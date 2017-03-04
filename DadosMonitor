@@ -18,7 +18,7 @@ purpleClaro="\033[1;35m"
 cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 
-"\033[1;34mPARA SAIR APERTE CTRL + C\033[1;34m"
+echo -e "\033[1;34mPARA SAIR APERTE CTRL + C\033[1;34m"
 sleep 4
 
 nload
