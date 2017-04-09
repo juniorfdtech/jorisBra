@@ -1,0 +1,28 @@
+export red=$'\e[0;91m'
+export green=$'\e[0;92m'
+export white=$'\e[0;97m'
+export cyan=$'\e[1;36m'
+ 
+function banner {
+printf "${cyan}
+ __  __             _ _             
+|  \/  | ___  _ __ (_) |_ ___  _ __ 
+| |\/| |/ _ \| '_ \| | __/ _ \| '__|
+| |  | | (_) | | | | | || (_) | |   
+|_|  |_|\___/|_| |_|_|\__\___/|_|   
+ 
+${red}By Joe Linux                                     
+                            
+"
+}
+ 
+ 
+while true
+do
+monitorar=$(ps x | grep "sshd:" | wc -l)
+resultado=$(($monitorar-1))
+banner
+echo "${green}Usuarios Conectados: ${white}$resultado"
+sleep 2s
+clear
+done
