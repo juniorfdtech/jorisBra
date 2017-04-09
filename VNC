@@ -1,4 +1,23 @@
 #!/bin/bash
+
+echo -e '\033[05;31m-------------------------------------------------------\033[00;37m'
+echo -e '\033[01;32m              O que deseja fazer ?\033[00;37m'
+echo " "
+echo -e 'Digite: \033[01;32m1\033[00;37m Para Instalar o VNC.'
+echo " "
+echo -e 'Digite: \033[01;32m2\033[00;37m Iniciar VNC.'
+echo " "
+echo -e '\033[05;31m-------------------------------------------------------\033[00;37m'
+echo " "
+echo " "
+read -p "Responda: " -e -i  resposta
+if [[ "$resposta" = '1' ]]; then
+
+apt-get install xfce4 xfce4-goodies gnome-icon-theme tightvncserver sudo -y
+apt-get install -y iceweasel
+clear
+
+elif [[ "$resposta" = '2' ]]; then
 echo -e "\033[1;34m ESCOLHA UMA SENHA e DEPOIS CONFIRMA\033[1;32m"
 sleep 3
 
