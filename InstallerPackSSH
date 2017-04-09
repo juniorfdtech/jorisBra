@@ -38,8 +38,6 @@ apt-get install htop
 apt-get install screenfetch -y
 apt-get install python-pip -y
 pip install speedtest-cli
-apt-get install xfce4 xfce4-goodies gnome-icon-theme tightvncserver sudo -y
-apt-get install -y iceweasel
 apt-get install nethogs -y
 apt-get install nload
 iptables -F
