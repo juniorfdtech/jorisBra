@@ -35,8 +35,10 @@ apt-get update
 apt-get install bc 
 apt-get install nano
 apt-get install htop
-apt-get install screenfetch -y
-echo "screenfetch" | tee -a ~/.bashrc
+sudo apt-get install screenfetch -y
+wget https://raw.githubusercontent.com/KittyKatt/screenFetch/master/screenfetch-dev
+echo "bash screenfetch-dev" | tee -a ~/.bashrc
+clear
 apt-get install python-pip -y
 pip install speedtest-cli
 apt-get install nethogs -y
