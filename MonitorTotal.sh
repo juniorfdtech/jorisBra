@@ -1,4 +1,3 @@
-#!/bin/bash
 export red=$'\e[0;91m'
 export green=$'\e[0;92m'
 export white=$'\e[0;97m'
