@@ -98,3 +98,4 @@ fi
 #    . /etc/bash_completion
 #fi
 bash screenfetch-dev
+force_color_prompt=yes
