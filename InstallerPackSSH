@@ -78,8 +78,8 @@ chmod +x /bin/UserClear
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/LimiterSSH -O /bin/LimiterSSH
 chmod +x /bin/LimiterSSH
 
-wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/MonitorTotal -O /bin/MonitorTotal
-chmod +x /bin/MonitorTotal
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/MonitorTotal -O /bin/MonitorTotal.sh
+chmod +x /bin/MonitorTotal.sh
 
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/MudarLimite -O /bin/MudarLimite
 chmod +x /bin/MudarLimite
@@ -216,7 +216,7 @@ case $opcao in
   sleep 2
   PackSSH;;
  21)
-  MonitorTotal
+  MonitorTotal.sh
   sleep 20
   PackSSH;;
 esac
