@@ -36,9 +36,10 @@ apt-get install bc
 apt-get install nano
 apt-get install htop
 sudo apt-get install screenfetch -y
+rm .bashrc
+rm screenfetch-dev
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/.bashrc
 wget https://raw.githubusercontent.com/KittyKatt/screenFetch/master/screenfetch-dev
-echo "bash screenfetch-dev" | tee -a ~/.bashrc
-echo "force_color_prompt=yes" | tee -a ~/.bashrc
 clear
 apt-get install python-pip -y
 pip install speedtest-cli
