@@ -197,7 +197,7 @@ clear
 			;;
 			4) exit;;
 		esac
-	done
+	
 else
 	clear
 	echo 'Bem vindo ao instalador OpenVPN'
