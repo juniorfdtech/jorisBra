@@ -92,114 +92,11 @@ read -p "Responda: " -e -i 2 resposta
 if [[ "$resposta" = '1' ]]; then
 clear
 if [[ -e /etc/openvpn/server.conf ]]; then
+echo "OpenVPN já está instalado"
 exit	
 fi
 clear
-		echo "OpenVPN já está instalado"
-		echo ""
-		echo "O que você deseja fazer?"
-		echo "   1) Adicionar novo usuário"
-		echo "   2) Remover um usuário"
-		echo "   3) Remover OpenVPN"
-		echo "   4) Sair"
-		read -p "Selecione a opção [1-4]: " option
-		case $option in
-			1) 
-			echo ""
-			echo "Diga-me um nome para o usuario"
-			echo "Use somente o nome sem caracteres especiais"
-			read -p "Client name: " -e -i client CLIENT
-			cd /etc/openvpn/easy-rsa/
-			./easyrsa build-client-full $CLIENT nopass
-			# Generates the custom client.ovpn
-			newclient "$CLIENT"
-			echo ""
-			echo "Client $CLIENT added, configuration is available at" ~/"$CLIENT.ovpn"
-			exit
-			;;
-			2)
-			# This option could be documented a bit better and maybe even be simplimplified
-			# ...but what can I say, I want some sleep too
-			NUMBEROFCLIENTS=$(tail -n +2 /etc/openvpn/easy-rsa/pki/index.txt | grep -c "^V")
-			if [[ "$NUMBEROFCLIENTS" = '0' ]]; then
-				echo ""
-				echo "Você não tem usuarios existentes!"
-				exit 6
-			fi
-			echo ""
-			echo "Selecione um usuario para remover"
-			tail -n +2 /etc/openvpn/easy-rsa/pki/index.txt | grep "^V" | cut -d '=' -f 2 | nl -s ') '
-			if [[ "$NUMBEROFCLIENTS" = '1' ]]; then
-				read -p "Selecione um usuario [1]: " CLIENTNUMBER
-			else
-				read -p "Selecione um usuario [1-$NUMBEROFCLIENTS]: " CLIENTNUMBER
-			fi
-			CLIENT=$(tail -n +2 /etc/openvpn/easy-rsa/pki/index.txt | grep "^V" | cut -d '=' -f 2 | sed -n "$CLIENTNUMBER"p)
-			cd /etc/openvpn/easy-rsa/
-			./easyrsa --batch revoke $CLIENT
-			./easyrsa gen-crl
-			rm -rf pki/reqs/$CLIENT.req
-			rm -rf pki/private/$CLIENT.key
-			rm -rf pki/issued/$CLIENT.crt
-			rm -rf /etc/openvpn/crl.pem
-			cp /etc/openvpn/easy-rsa/pki/crl.pem /etc/openvpn/crl.pem
-			# CRL is read with each client connection, when OpenVPN is dropped to nobody
-			chown nobody:$GROUPNAME /etc/openvpn/crl.pem
-			echo ""
-			echo "Usuario removido"
-			exit
-			;;
-			3) 
-			echo ""
-			read -p "Você deseja remover OpenVPN? [y/n]: " -e -i n REMOVE
-			if [[ "$REMOVE" = 'y' ]]; then
-				PORT=$(grep '^port ' /etc/openvpn/server.conf | cut -d " " -f 2)
-				PROTOCOL=$(grep '^proto ' /etc/openvpn/server.conf | cut -d " " -f 2)
-				IP=$(grep 'iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -j SNAT --to ' $RCLOCAL | cut -d " " -f 11)
-				if pgrep firewalld; then
-					# Using both permanent and not permanent rules to avoid a firewalld reload.
-					firewall-cmd --zone=public --remove-port=$PORT/$PROTOCOL
-					firewall-cmd --zone=trusted --remove-source=10.8.0.0/24
-					firewall-cmd --permanent --zone=public --remove-port=$PORT/$PROTOCOL
-					firewall-cmd --permanent --zone=trusted --remove-source=10.8.0.0/24
-				fi
-				if iptables -L -n | grep -qE 'REJECT|DROP|ACCEPT'; then
-					iptables -D INPUT -p $PROTOCOL --dport $PORT -j ACCEPT
-					iptables -D FORWARD -s 10.8.0.0/24 -j ACCEPT
-					iptables -D FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
-					sed -i "/iptables -I INPUT -p $PROTOCOL --dport $PORT -j ACCEPT/d" $RCLOCAL
-					sed -i "/iptables -I FORWARD -s 10.8.0.0\/24 -j ACCEPT/d" $RCLOCAL
-					sed -i "/iptables -I FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT/d" $RCLOCAL
-				fi
-				iptables -t nat -D POSTROUTING -s 10.8.0.0/24 -j SNAT --to $IP
-				sed -i '/iptables -t nat -A POSTROUTING -s 10.8.0.0\/24 -j SNAT --to /d' $RCLOCAL
-				if hash sestatus 2>/dev/null; then
-					if sestatus | grep "Current mode" | grep -qs "enforcing"; then
-						if [[ "$PORT" != '1194' || "$PROTOCOL" = 'tcp' ]]; then
-							semanage port -d -t openvpn_port_t -p $PROTOCOL $PORT
-						fi
-					fi
-				fi
-				if [[ "$OS" = 'debian' ]]; then
-					apt-get remove --purge -y openvpn openvpn-blacklist
-				else
-					yum remove openvpn -y
-				fi
-				rm -rf /etc/openvpn
-				rm -rf /usr/share/doc/openvpn*
-				echo ""
-				echo "OpenVPN removido!"
-			else
-				echo ""
-				echo "Remoção abordada!"
-			fi
-			exit
-			;;
-			4) exit;;
-		esac
-	
-else
-	clear
+		
 	echo 'Bem vindo ao instalador OpenVPN'
 	echo ""
 	# OpenVPN instalador e criação do primeiro usuario
