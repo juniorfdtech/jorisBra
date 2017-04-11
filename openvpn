@@ -91,12 +91,9 @@ read -p "Responda: " -e -i 2 resposta
 
 if [[ "$resposta" = '1' ]]; then
 clear
-
-
 if [[ -e /etc/openvpn/server.conf ]]; then
-	while :
-	do
-	clear
+exit	
+fi	
 		echo "OpenVPN já está instalado"
 		echo ""
 		echo "O que você deseja fazer?"
