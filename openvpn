@@ -93,7 +93,8 @@ if [[ "$resposta" = '1' ]]; then
 clear
 if [[ -e /etc/openvpn/server.conf ]]; then
 exit	
-fi	
+fi
+clear
 		echo "OpenVPN já está instalado"
 		echo ""
 		echo "O que você deseja fazer?"
