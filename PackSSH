@@ -119,7 +119,7 @@ case $opcao in
   sleep 2
   PackSSH;;
  21)
-  MonitorTotal.sh
+  MonitorTotal
   sleep 20
   PackSSH;;
 esac
