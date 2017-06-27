@@ -23,7 +23,7 @@ echo -e "\033[1;34m              ____            _     ____ ____  _   _         
 echo -e "\033[1;34m             |  _ \ __ _  ___| | __/ ___/ ___|| | | |                 \033[0m" 
 echo -e "\033[1;34m             | |_) / _  |/ __| |/ /\___ \___ \| |_| |                 \033[0m" 
 echo -e "\033[1;34m             |  __/ (_| | (__|   <  ___) |__) |  _  |                 \033[0m" 
-echo -e "\033[1;34m             |_|   \__,_|\___|_|\_\|____/____/|_| |_|                 \033[0m"
+echo -e "\033[1;34m             |_|   \__,_|\___|_|\_\|____/____/|_| |_| V. 2.1          \033[0m"
 echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
 
 sleep 5
@@ -79,8 +79,8 @@ chmod +x /bin/UserClear
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/LimiterSSH -O /bin/LimiterSSH
 chmod +x /bin/LimiterSSH
 
-wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/MonitorTotal -O /bin/MonitorTotal.sh
-chmod +x /bin/MonitorTotal.sh
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/MonitorTotal -O /bin/MonitorTotal
+chmod +x /bin/MonitorTotal
 
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/MudarLimite -O /bin/MudarLimite
 chmod +x /bin/MudarLimite
@@ -217,7 +217,7 @@ case $opcao in
   sleep 2
   PackSSH;;
  21)
-  MonitorTotal.sh
+  MonitorTotal
   sleep 20
   PackSSH;;
 esac
