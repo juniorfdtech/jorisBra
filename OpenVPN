@@ -77,13 +77,13 @@ echo -e '\033[01;32m                      Oque deseja fazer ?              \033[
 echo " "
 echo -e 'Digite: \033[01;32m1\033[00;37m para Instalar o OpenVPN.'
 echo " "
-echo -e 'Digite: \033[01;32m2\033[00;37m para Criar um usuário OpenVPN.'
+echo -e 'Digite: \033[01;32m2\033[00;37m para Criar um usuário OpenVPN VIVO.'
 echo " "
-echo -e 'Digite: \033[01;32m3\033[00;37m para Deletar um usuário OpenVPN.'
+echo -e 'Digite: \033[01;32m3\033[00;37m para Deletar um usuário OpenVPN VIVO.'
 echo " "
 echo -e 'Digite: \033[01;32m4\033[00;37m para Desinstalar o OpenVPN.'
 echo " "
-echo -e 'Digite: \033[01;32m5\033[00;37m para Renovar um usuário OpenVPN.'
+echo -e 'Digite: \033[01;32m5\033[00;37m para Renovar um usuário OpenVPN VIVO.'
 echo " "
 echo -e '\033[05;31m-------------------------------------------------------\033[00;37m'
 echo " "
