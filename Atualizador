@@ -29,7 +29,6 @@ sleep 5
 
 rm InstallerPackSSH
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/InstallerPackSSH
-clear
 
 echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
 echo -e "\033[1;34m                _   _               _ _             _                 \033[0m"
