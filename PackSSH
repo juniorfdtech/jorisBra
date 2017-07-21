@@ -43,9 +43,10 @@ echo -e "|18|\033[01;31m•====> OpenVPN (Configura e Gerencia Usuarios .ovpn)\0
 echo -e "|19|\033[01;31m•====> UserClear (Limpa Usuarios Vencidos)\033[0m"
 echo -e "|20|\033[01;31m•====> KernelControl (Procura ATT para Kernel ou Remove)\033[0m"
 echo -e "|21|\033[01;31m•====> SSHMonitor (Monitor Total de Usuarios Conectados)\033[0m"
+echo -e "|22|\033[01;31m•====> Atualizador PackSSH (Atualiza o Pack)\033[0m"
 echo""
 echo""
-read -p " Selecione a opção [01-21]: " opcao
+read -p " Selecione a opção [01-22]: " opcao
 
 case $opcao in
  01)
@@ -121,5 +122,9 @@ case $opcao in
  21)
   MonitorTotal
   sleep 20
+  PackSSH;;
+ 22)
+  Atualizador
+  sleep 2
   PackSSH;;
 esac
