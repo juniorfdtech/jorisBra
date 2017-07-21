@@ -311,7 +311,17 @@ proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
 remote $IP $PORT
-http-proxy-option CUSTOM-HEADER X-Online-Host sdp.vivo.com.br
+dhcp-option DOMAIN google.com   
+dhcp-option DOMAIN m.google.com  
+dhcp-option DNS 8.8.8.8   
+dhcp-option DNS 8.8.4.4  
+http-proxy-retry 
+http-proxy $IP 80
+http-proxy-option EXT1 Host www.netshoes.com.br 
+http-proxy-option EXT2 Referer http://www.netshoes.com.br
+
+http-proxy-option EXT1 Host www.netshoes.com.br  
+http-proxy-option EXT2 Referer http://www.netshoes.com.br 
 http-proxy $IP 80
 resolv-retry infinite
 nobind
