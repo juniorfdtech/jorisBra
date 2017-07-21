@@ -111,7 +111,10 @@ chmod +x /bin/Atualizador
 
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/OpenVPN -O /bin/OpenVPN
 chmod +x /bin/OpenVPN
- 
+
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/OpenVPN2 -O /bin/OpenVPN2
+chmod +x /bin/OpenVPN2
+
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/PackSSH -O /bin/PackSSH
 chmod +x /bin/PackSSH
 
@@ -140,14 +143,15 @@ echo -e "|14|\033[01;31m•====> MudarSenha (Muda a Senha do Usuario)\033[0m"
 echo -e "|15|\033[01;31m•====> MudarValidade (Muda a Data de Validade do Usuario)\033[0m"
 echo -e "|16|\033[01;31m•====> UserDel (Deleta Usuario)\033[0m"
 echo -e "|17|\033[01;31m•====> addhost (Adiciona Novo Host ao Squid)\033[0m"
-echo -e "|18|\033[01;31m•====> OpenVPN (Configura e Gerencia Usuarios .ovpn)\033[0m"
-echo -e "|19|\033[01;31m•====> UserClear (Limpa Usuarios Vencidos)\033[0m"
-echo -e "|20|\033[01;31m•====> KernelControl (Procura ATT para Kernel ou Remove)\033[0m"
-echo -e "|21|\033[01;31m•====> SSHMonitor (Monitor Total de Usuarios Conectados)\033[0m"
-echo -e "|22|\033[01;31m•====> Atualizador PackSSH (Atualiza o Pack)\033[0m"
+echo -e "|18|\033[01;31m•====> OpenVPN VIVO(Configura e Gerencia Usuarios .ovpn)\033[0m"
+echo -e "|19|\033[01;31m•====> OpenVPN OI(Configura e Gerencia Usuarios .ovpn)\033[0m"
+echo -e "|20|\033[01;31m•====> UserClear (Limpa Usuarios Vencidos)\033[0m"
+echo -e "|21|\033[01;31m•====> KernelControl (Procura ATT para Kernel ou Remove)\033[0m"
+echo -e "|22|\033[01;31m•====> SSHMonitor (Monitor Total de Usuarios Conectados)\033[0m"
+echo -e "|23|\033[01;31m•====> Atualizador PackSSH (Atualiza o Pack)\033[0m"
 echo""
 echo""
-read -p " Selecione a opção [01-22]: " opcao
+read -p " Selecione a opção [01-23]: " opcao
 
 case $opcao in
  01)
@@ -213,18 +217,22 @@ case $opcao in
   sleep 5
   PackSSH;;
  19)
+  OpenVPN2
+  sleep 5
+  PackSSH;;
+ 20)
   UserClear
   sleep 3
   PackSSH;;
- 20)
+ 21)
   KernelControl
   sleep 2
   PackSSH;;
- 21)
+ 22)
   MonitorTotal
   sleep 20
   PackSSH;;
- 22)
+ 23)
   Atualizador
   sleep 2
   PackSSH;;
