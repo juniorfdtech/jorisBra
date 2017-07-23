@@ -48,7 +48,7 @@ fi
 
 newclient () {
 	# Generates the custom client.ovpn
-	cp /etc/openvpn/client-common1.txt ~/$1.ovpn
+	cp /etc/openvpn/client-common.txt ~/$1.ovpn
 	echo "<ca>" >> ~/$1.ovpn
 	cat /etc/openvpn/easy-rsa/pki/ca.crt >> ~/$1.ovpn
 	echo "</ca>" >> ~/$1.ovpn
@@ -72,18 +72,18 @@ if [[ "$IP" = "" ]]; then
 fi
 
 echo -e '\033[05;31m-------------------------------------------------------\033[00;37m'
-echo -e '\033[01;32m                          OpenVPN OI                   \033[00;37m'
+echo -e '\033[01;32m                        OpenVPN VIVO                   \033[00;37m'
 echo -e '\033[01;32m                      Oque deseja fazer ?              \033[00;37m'
 echo " "
 echo -e 'Digite: \033[01;32m1\033[00;37m para Instalar o OpenVPN.'
 echo " "
-echo -e 'Digite: \033[01;32m2\033[00;37m para Criar um usuário OpenVPN OI.'
+echo -e 'Digite: \033[01;32m2\033[00;37m para Criar um usuário OpenVPN VIVO.'
 echo " "
-echo -e 'Digite: \033[01;32m3\033[00;37m para Deletar um usuário OpenVPN OI.'
+echo -e 'Digite: \033[01;32m3\033[00;37m para Deletar um usuário OpenVPN VIVO.'
 echo " "
 echo -e 'Digite: \033[01;32m4\033[00;37m para Desinstalar o OpenVPN.'
 echo " "
-echo -e 'Digite: \033[01;32m5\033[00;37m para Renovar um usuário OpenVPN OI.'
+echo -e 'Digite: \033[01;32m5\033[00;37m para Renovar um usuário OpenVPN VIVO.'
 echo " "
 echo -e '\033[05;31m-------------------------------------------------------\033[00;37m'
 echo " "
@@ -329,10 +329,10 @@ persist-key
 persist-tun
 remote-cert-tls server
 cipher AES-256-CBC
-comp-lzo
+comp-lzo no
 setenv opt block-outside-dns
 key-direction 1
-verb 3" > /etc/openvpn/client-common1.txt
+verb 3" > /etc/openvpn/client-common.txt
 	# Generates the custom client.ovpn
 	newclient "$CLIENT"
 	echo ""
