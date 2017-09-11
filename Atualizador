@@ -30,6 +30,8 @@ sleep 4
 rm InstallerPackSSH
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/InstallerPackSSH
 clear
+bash InstallerPackSSH
+clear
 
 sleep 4
 
