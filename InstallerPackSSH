@@ -38,6 +38,7 @@ apt-get install htop
 sudo apt-get install screenfetch -y
 rm .bashrc
 rm screenfetch-dev
+apt-get install -y python3-pip
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/.bashrc
 wget https://raw.githubusercontent.com/KittyKatt/screenFetch/master/screenfetch-dev
 clear
@@ -65,7 +66,7 @@ wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/TesteConexao -O 
 chmod +x /bin/SpeedTest
 
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/socks -O /bin/Socks
-chmod +x /bin Socks
+chmod +x /bin Socks.py
 
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/Banner -O /bin/Banner
 chmod +x /bin/Banner
