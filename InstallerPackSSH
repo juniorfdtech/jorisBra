@@ -64,6 +64,9 @@ chmod +x /bin/OpenUDP
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/TesteConexao -O /bin/SpeedTest
 chmod +x /bin/SpeedTest
 
+wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/socks -O /bin/Socks
+chmod +x /bin Socks
+
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/Banner -O /bin/Banner
 chmod +x /bin/Banner
 
@@ -148,7 +151,8 @@ echo -e "|19|\033[01;31m•====> OpenVPN VIVO\033[0m""\033[0;34m[OFF]\033[0;34m"
 echo -e "|20|\033[01;31m•====> UserClear (Limpa Usuarios Vencidos)\033[0m"
 echo -e "|21|\033[01;31m•====> KernelControl (Procura ATT para Kernel ou Remove)\033[0m"
 echo -e "|22|\033[01;31m•====> SSHMonitor (Monitor Total de Usuarios Conectados)\033[0m"
-echo -e "|23|\033[01;31m•====> Atualizador PackSSH (Atualiza o Pack)\033[0m"
+echo -e "|23|\033[01;34m•====> Instala SOCKS \033[01;34m"
+echo -e "|24|\033[01;31m•====> Atualizador PackSSH (Atualiza o Pack)\033[0m"
 echo""
 echo""
 read -p " Selecione a opção [01-23]: " opcao
@@ -233,6 +237,10 @@ case $opcao in
   sleep 20
   PackSSH;;
  23)
+  Socks
+  sleep 5
+  PackSSH;;
+ 24)
   Atualizador
   sleep 2
   PackSSH;;
