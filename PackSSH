@@ -130,7 +130,7 @@ case $opcao in
   sleep 20
   PackSSH;;
  23)
-  Socks
+  Socks.py
   sleep 5
   PackSSH;;
  24)
