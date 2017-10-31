@@ -80,6 +80,8 @@ forms.claro.com.br
 golpf.claro.com.br
 logtiscap.claro.com.br
 www.recargafacil.claro.com.br
+global-4-lvs-colossus-5.opera-mini.net.prancis.nut.cc/
+ecob.claro.com.br
 .vivo.com.br
 .bradescocelular.com.br
 .claroseguridad.com" > /etc/payloads
@@ -96,7 +98,6 @@ sshd_config
 service ssh restart 1> /dev/null 2> /dev/null
 
 echo "http_port 80
-http_port 8080
 http_port 8799
 http_port 3128
 visible_hostname PackSSH
@@ -132,7 +133,6 @@ sshd_config
 service ssh restart 1> /dev/null 2> /dev/null
 
 echo "http_port 80
-http_port 8080
 http_port 8799
 http_port 3128
 visible_hostname VpsPack
@@ -166,7 +166,6 @@ sshd_config
 service sshd restart 1> /dev/null 2> /dev/null
 
 echo "http_port 80
-http_port 8080
 http_port 8799
 http_port 3128
 visible_hostname VpsPack
@@ -200,7 +199,6 @@ sshd_config
 service ssh restart 1> /dev/null 2> /dev/null
 
 echo "http_port 80
-http_port 8080
 http_port 8799
 http_port 3128
 visible_hostname VpsPack
@@ -236,7 +234,6 @@ sshd_config
 service sshd restart 1> /dev/null 2> /dev/null
 
 echo "http_port 80
-http_port 8080
 http_port 8799
 http_port 3128
 visible_hostname PackSSH
@@ -272,7 +269,6 @@ sshd_config
 service sshd restart 1> /dev/null 2> /dev/null
 service ssh restart > /dev/null 2> /dev/null
 echo "http_port 80
-http_port 8080
 http_port 8799
 http_port 3128
 visible_hostname PackSSH
