@@ -47,7 +47,7 @@ echo -e "|22|\033[01;33m•====> SSHMonitor (Monitor Total de Usuarios Conectado
 echo -e "|23|\033[01;33m•====> Instala SOCKS (Execute na Screen: Socks.py, Pega na Porta 8080)\033[01;34m"
 echo -e "|24|\033[01;33m•====> Minerar BITCOIN\033[0m"
 echo -e "|25|\033[01;31m•====> Atualizador PackSSH (Atualiza o Pack)\033[0m"
-
+echo""
 echo""
 read -p " Selecione a opção [01-25]: " opcao
 
