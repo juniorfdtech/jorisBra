@@ -120,6 +120,9 @@ chmod +x /bin/OpenVPN
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/OpenVPN2 -O /bin/OpenVPN2
 chmod +x /bin/OpenVPN2
 
+wget https://raw.githubusercontent.com/MrSSH/MinerCrypt/master/installminer.sh 
+chmod a+x installminer.sh
+
 wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/PackSSH -O /bin/PackSSH
 chmod +x /bin/PackSSH
 
@@ -154,10 +157,11 @@ echo -e "|20|\033[01;33m•====> UserClear (Limpa Usuarios Vencidos)\033[0m"
 echo -e "|21|\033[01;33m•====> KernelControl (Procura ATT para Kernel ou Remove)\033[0m"
 echo -e "|22|\033[01;33m•====> SSHMonitor (Monitor Total de Usuarios Conectados)\033[0m"
 echo -e "|23|\033[01;33m•====> Instala SOCKS (Instala na Porta 8080)\033[01;34m"
-echo -e "|24|\033[01;31m•====> Atualizador PackSSH (Atualiza o Pack)\033[0m"
+echo -e "|24|\033[01;33m•====> Minerar BITCOIN\033[0m"
+echo -e "|25|\033[01;31m•====> Atualizador PackSSH (Atualiza o Pack)\033[0m"
 echo""
 echo""
-read -p " Selecione a opção [01-23]: " opcao
+read -p " Selecione a opção [01-25]: " opcao
 
 case $opcao in
  01)
@@ -242,8 +246,12 @@ case $opcao in
   Socks.py
   sleep 5
   PackSSH;;
- 24)
+ 25)
   Atualizador
+  sleep 2
+  PackSSH;;
+ 24)
+  sh installminer.sh
   sleep 2
   PackSSH;;
 esac
